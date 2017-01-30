@@ -17,4 +17,9 @@ class Game: NSObject {
         super.init()
     }
     
+    func play(answer: String) -> Bool {
+        score += 1
+        return true
+    }
+    
 }
