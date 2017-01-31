@@ -18,9 +18,6 @@ class GameTests: XCTestCase {
 
     }
     
-    override func tearDown() {
-        super.tearDown()
-    }
     
     func testGameStartsAtZero() {
         XCTAssertTrue(game.score == 0)
@@ -84,6 +81,10 @@ class GameTests: XCTestCase {
         game.score = 1
         game.play(move: "Fizz")
         XCTAssertEqual(game.score, 1)
+    }
+    
+    override func tearDown() {
+        super.tearDown()
     }
     
 }
