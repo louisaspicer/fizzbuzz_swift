@@ -44,7 +44,18 @@ class ViewControllerUITests: XCTestCase {
         numberButton.tap()
         let newScore = numberButton.label
         XCTAssertEqual(newScore, "2")
+    }
+    
+    func testTapFizzButtonIncrementsTo3() {
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        let FizzButton = app.buttons["FizzButton"]
         
+        numberButton.tap()
+        numberButton.tap()
+        FizzButton.tap()
+        let newScore = numberButton.label
+        XCTAssertEqual(newScore, "3")
     }
     
     override func tearDown() {
