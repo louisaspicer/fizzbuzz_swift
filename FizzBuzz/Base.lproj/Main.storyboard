@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -44,7 +44,7 @@
                                 <color key="textColor" red="1" green="1" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7D-e3-uRC">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7D-e3-uRC" userLabel="GameView">
                                 <rect key="frame" x="56" y="202" width="263" height="263"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0e-mM-N5G">
@@ -54,13 +54,48 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cHe-Dc-mSl">
+                                        <rect key="frame" x="136" y="0.0" width="126" height="126"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="70"/>
+                                        <state key="normal" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zlE-7c-B03">
+                                        <rect key="frame" x="0.0" y="137" width="126" height="126"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="70"/>
+                                        <state key="normal" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcv-iK-2Mt">
+                                        <rect key="frame" x="137" y="137" width="126" height="126"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="70"/>
+                                        <state key="normal" backgroundImage="button_border">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="zlE-7c-B03" firstAttribute="height" secondItem="cHe-Dc-mSl" secondAttribute="height" id="3MO-Sb-S2p"/>
+                                    <constraint firstItem="cHe-Dc-mSl" firstAttribute="width" secondItem="x0e-mM-N5G" secondAttribute="width" id="3rw-3e-8j7"/>
+                                    <constraint firstItem="cHe-Dc-mSl" firstAttribute="width" secondItem="zcv-iK-2Mt" secondAttribute="width" id="4ON-bP-N4p"/>
+                                    <constraint firstItem="x0e-mM-N5G" firstAttribute="width" secondItem="zcv-iK-2Mt" secondAttribute="width" id="7Bz-UW-S2s"/>
+                                    <constraint firstItem="zlE-7c-B03" firstAttribute="width" secondItem="cHe-Dc-mSl" secondAttribute="width" id="8Qi-63-UPo"/>
+                                    <constraint firstItem="cHe-Dc-mSl" firstAttribute="height" secondItem="x0e-mM-N5G" secondAttribute="height" id="8zu-60-4F5"/>
+                                    <constraint firstItem="x0e-mM-N5G" firstAttribute="height" secondItem="zlE-7c-B03" secondAttribute="height" id="AOt-gT-iPa"/>
+                                    <constraint firstItem="zcv-iK-2Mt" firstAttribute="height" secondItem="zlE-7c-B03" secondAttribute="height" id="FGL-xe-K7T"/>
+                                    <constraint firstItem="x0e-mM-N5G" firstAttribute="width" secondItem="zlE-7c-B03" secondAttribute="width" id="Lz3-sF-0bo"/>
+                                    <constraint firstItem="zcv-iK-2Mt" firstAttribute="width" secondItem="zlE-7c-B03" secondAttribute="width" id="MhW-r2-1p9"/>
                                     <constraint firstItem="x0e-mM-N5G" firstAttribute="leading" secondItem="p7D-e3-uRC" secondAttribute="leading" id="My1-La-gTf"/>
+                                    <constraint firstAttribute="bottom" secondItem="zlE-7c-B03" secondAttribute="bottom" id="NY2-RY-dhT"/>
                                     <constraint firstItem="x0e-mM-N5G" firstAttribute="height" secondItem="p7D-e3-uRC" secondAttribute="height" multiplier="0.48" id="Xve-44-byT"/>
                                     <constraint firstItem="x0e-mM-N5G" firstAttribute="top" secondItem="p7D-e3-uRC" secondAttribute="top" id="adu-wf-Ceg"/>
                                     <constraint firstItem="x0e-mM-N5G" firstAttribute="width" secondItem="p7D-e3-uRC" secondAttribute="width" multiplier="0.48" id="aiG-2H-m69"/>
+                                    <constraint firstItem="x0e-mM-N5G" firstAttribute="height" secondItem="zcv-iK-2Mt" secondAttribute="height" id="fxe-Py-CXO"/>
+                                    <constraint firstItem="cHe-Dc-mSl" firstAttribute="height" secondItem="zcv-iK-2Mt" secondAttribute="height" id="iPC-5H-yqe"/>
+                                    <constraint firstItem="zlE-7c-B03" firstAttribute="leading" secondItem="p7D-e3-uRC" secondAttribute="leading" id="rD9-qI-8vL"/>
                                     <constraint firstAttribute="width" secondItem="p7D-e3-uRC" secondAttribute="height" multiplier="1:1" id="tgS-6N-qXH"/>
                                 </constraints>
                             </view>
