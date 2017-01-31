@@ -9,7 +9,9 @@
 import XCTest
 
 class ViewControllerUITests: XCTestCase {
-        
+    
+    
+    
     override func setUp() {
         super.setUp()
         
@@ -23,12 +25,27 @@ class ViewControllerUITests: XCTestCase {
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
     
+    
+    
     func testTapNumberButtonIncrementsScore() {
         let app = XCUIApplication()
         let numberButton = app.buttons["numberButton"]
+        
         numberButton.tap()
         let newScore = numberButton.label
-        XCTAssertEqual(newScore, "1")    }
+        XCTAssertEqual(newScore, "1")
+    }
+    
+    func testTapNumberButtonTwiceIncrementsScore() {
+        let app = XCUIApplication()
+        let numberButton = app.buttons["numberButton"]
+        
+        numberButton.tap()
+        numberButton.tap()
+        let newScore = numberButton.label
+        XCTAssertEqual(newScore, "2")
+        
+    }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
