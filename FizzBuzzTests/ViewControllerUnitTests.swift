@@ -24,8 +24,48 @@ class ViewControllerUnitTests: XCTestCase {
         let _ = viewController.view
     }
     
-    func test() {
-        XCTAssertTrue(true)
+    func testMove1IncrementsScore() {
+        viewController.play(move: "1")
+        let newScore = viewController.gameScore
+        XCTAssertEqual(newScore, 1)
+    }
+    
+    func testMove2IncrementScore() {
+        viewController.play(move: "1")
+        viewController.play(move: "2")
+        let newScore = viewController.gameScore
+        XCTAssertEqual(newScore, 2)
+    }
+    
+    func testHasGame() {
+        XCTAssertNotNil(viewController.game)
+    }
+    
+    func testFizzIncrementScore() {
+        viewController.game?.score = 2
+        viewController.play(move: "Fizz")
+        let newScore = viewController.gameScore
+        XCTAssertEqual(newScore, 3)
+    }
+    
+    func testBuzzIncrementScore() {
+        viewController.game?.score = 4
+        viewController.play(move: "Buzz")
+        let newScore = viewController.gameScore
+        XCTAssertEqual(newScore, 5)
+    }
+    
+    func testFizzBuzzIncrementScore() {
+        viewController.game?.score = 14
+        viewController.play(move: "FizzBuzz")
+        let newScore = viewController.gameScore
+        XCTAssertEqual(newScore, 15)
+    }
+    
+    func testOnWrongMoveScoreNotIncremented() {
+        viewController.play(move: "Fizz")
+        let newScore = viewController.gameScore
+        XCTAssertEqual(newScore, 0)
     }
     
     override func tearDown() {
